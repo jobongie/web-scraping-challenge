@@ -44,7 +44,7 @@ def scrape():
     tables = pd.read_html(mars_facts_url)
     mars_facts_df = tables[0]
     mars_facts_df.columns = ["Description", "Value"]
-    mars_html_table = mars_facts_df.to_html()
+    mars_html_table = mars_facts_df.to_html(index=False, justify='left')
     mars_html_table.replace('\n', '')
     
     # Mars hemisphere name and image to be scraped
