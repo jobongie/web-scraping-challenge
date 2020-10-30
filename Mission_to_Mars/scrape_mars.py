@@ -58,7 +58,7 @@ def scrape():
     all_mars_hemis = hemis_soup.find('div', class_='collapsible results')
     mars_hemis = all_mars_hemis.find_all('div', class_='item')
     hemis_image_urls = []
-    
+
     # Iterate through each hemisphere data
     for i in mars_hemis:
 
